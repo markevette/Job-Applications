@@ -4,6 +4,8 @@ on:
   schedule:
     # 05:00 UTC ≈ 07:00 Berlin (CEST)
     - cron: "0 5 * * *"
+  workflow_dispatch:
+    # enables the Run workflow button
 
 jobs:
   daily-pipeline:
