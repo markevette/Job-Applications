@@ -34,6 +34,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Create data directory
+         run: mkdir -p data
+
       - name: Fetch jobs from Apify
         run: |
           python scripts/fetch_jobs.py --output data/jobs_raw.json
