@@ -25,4 +25,5 @@ if __name__ == "__main__":
     roles = [r.strip() for r in args.roles.split(",") if r.strip()]
     if any(role in job_title.lower() for role in roles):
     keep_job
+    print(job_title)
     main(args.input, args.output, roles)
