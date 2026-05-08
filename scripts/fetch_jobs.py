@@ -6,7 +6,7 @@ import requests
 def main(output_path: str):
     api_token = os.environ["APIFY_API_TOKEN"]
     # TODO: replace with your actual Apify actor/task URL
-    url = "https://api.apify.com/v2/actor-tasks/evettemark~linkedin-jobs-actor-task/run-sync-get-dataset-items"
+    url = "https://api.apify.com/v2/actor-tasks/evettemark~indeed-jobs-scraper-task/run-sync-get-dataset-items"
     params = {"token": api_token}
     resp = requests.get(url, params=params)
     resp.raise_for_status()
