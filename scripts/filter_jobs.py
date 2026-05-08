@@ -6,10 +6,14 @@ def main(input_path: str, output_path: str, roles: list[str]):
         jobs = json.load(f)
 
     roles_lower = [r.lower() for r in roles]
-    filtered = [
-        j for j in jobs
-        if any(r in j.get("title", "").lower() for r in roles_lower)
-    ]
+
+    filtered = []
+    for j in jobs:
+        title = j.get("title", "").lower()
+        if any(role in title for role in roles_lower):
+            filtered.append(j)
+
+    # Sort newest first and keep top 5
     filtered = sorted(filtered, key=lambda j: j.get("datePosted", ""), reverse=True)[:5]
 
     with open(output_path, "w", encoding="utf-8") as f:
@@ -22,8 +26,7 @@ if __name__ == "__main__":
     parser.add_argument("--roles", required=True,
                         help="Comma-separated roles")
     args = parser.parse_args()
+
     roles = [r.strip() for r in args.roles.split(",") if r.strip()]
-    if any(role in job_title.lower() for role in roles):
-    keep_job
-    print(job_title)
     main(args.input, args.output, roles)
+
