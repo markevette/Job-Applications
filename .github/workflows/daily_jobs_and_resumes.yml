@@ -18,7 +18,7 @@ jobs:
       GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
       EMAIL_TO: ${{ secrets.EMAIL_TO }}
       BASE_RESUME_PATH: "data/base_resume.txt"
-      TARGET_ROLES: "Data Analyst,Machine Learning Engineer,MLOps Engineer"
+      TARGET_ROLES: "Data Analyst,Machine Learning Engineer,MLOps Engineer,Data Scientist,AI Engineer,ML Engineer,Analytics Engineer"
 
     steps:
       - name: Checkout repo
