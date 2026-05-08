@@ -23,4 +23,6 @@ if __name__ == "__main__":
                         help="Comma-separated roles")
     args = parser.parse_args()
     roles = [r.strip() for r in args.roles.split(",") if r.strip()]
+    if any(role in job_title.lower() for role in roles):
+    keep_job
     main(args.input, args.output, roles)
