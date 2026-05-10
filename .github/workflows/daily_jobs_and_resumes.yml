@@ -1,9 +1,9 @@
 name: Daily job scraping and resume tailoring
 
 on:
-  schedule:
+  #schedule:
     # 05:00 UTC ≈ 07:00 Berlin (CEST)
-    - cron: "0 5 * * *"
+    #- cron: "0 5 * * *"
   workflow_dispatch:
     # enables the Run workflow button
 
